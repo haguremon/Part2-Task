@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         case 2:
             result = number1 * number2
         case 3:
-            guard number2 != 0 else{
+            guard number2 != 0 else {
                 totalLabel.text = "割る数には０以外を入力してください"
                 return
             }
