@@ -8,27 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet private var textField1: UITextField!
     @IBOutlet private var textField2: UITextField!
     @IBOutlet private var selectSegmentedControl: UISegmentedControl!
     @IBOutlet private var totalLabel: UILabel!
     
     
-    
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    
-    
-    }
     @IBAction func calcButton(_ sender: Any) {
         let number1 = Int(textField1.text ?? "") ?? 0
         let number2 = Int(textField2.text ?? "") ?? 0
-        var result:Int? = 0
+        let result:Int
         switch selectSegmentedControl.selectedSegmentIndex{
         case 0:
             result = number1 + number2
@@ -45,7 +35,7 @@ class ViewController: UIViewController {
         default:
             return
         }
-        totalLabel.text = String(result!)
+        totalLabel.text = String(result)
     }
 }
 
