@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func calcButton(_ sender: Any) {
-        let number1 = Int(textField1.text ?? "") ?? 0
-        let number2 = Int(textField2.text ?? "") ?? 0
-        let result:Int
+        let number1 = Double(textField1.text ?? "") ?? 0
+        let number2 = Double(textField2.text ?? "") ?? 0
+        let result:Double
         switch selectSegmentedControl.selectedSegmentIndex{
         case 0:
             result = number1 + number2
